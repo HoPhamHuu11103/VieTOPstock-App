@@ -52,7 +52,7 @@ with tab1:
             for symbol in symbols:
                 try:
                     stock = Vnstock().stock(symbol=symbol, source='TCBS')  # Sử dụng TCBS
-                    historical_data = stock.quote.history(start='2020-01-01', end='2024-12-31')
+                    historical_data = stock.quote.history(start='2020-01-01', end='2025-07-31')
                     
                     if historical_data.empty:
                         st.warning(f"Không tìm thấy dữ liệu cho mã: {symbol}")
@@ -207,7 +207,7 @@ with tab2:
             st.warning("Không tìm thấy file 'vnindex_data.csv'. Đang tải dữ liệu VN-Index...")
             try:
                 stock = Vnstock().stock(symbol='VNINDEX', source='TCBS')
-                vnindex_data = stock.quote.history(start='2020-01-01', end='2024-12-31')
+                vnindex_data = stock.quote.history(start='2020-01-01', end='2025-07-31')
                 vnindex_data['time'] = pd.to_datetime(vnindex_data['time'])
                 vnindex_data.to_csv("vnindex_data.csv", index=False)
                 st.success("Đã lưu dữ liệu VN-Index vào file 'vnindex_data.csv'.")
@@ -385,7 +385,7 @@ with tab3:
             st.warning("Không tìm thấy file 'vnindex_data.csv'. Đang tải dữ liệu VN-Index...")
             try:
                 stock = Vnstock().stock(symbol='VNINDEX', source='TCBS')
-                vnindex_data = stock.quote.history(start='2020-01-01', end='2024-12-31')
+                vnindex_data = stock.quote.history(start='2020-01-01', end='2025-07-31')
                 vnindex_data['time'] = pd.to_datetime(vnindex_data['time'])
                 vnindex_data.to_csv("vnindex_data.csv", index=False)
                 st.success("Đã lưu dữ liệu VN-Index vào file 'vnindex_data.csv'.")
@@ -581,7 +581,7 @@ with tab4:
             st.warning("Không tìm thấy file 'vnindex_data.csv'. Đang tải dữ liệu VN-Index...")
             try:
                 stock = Vnstock().stock(symbol='VNINDEX', source='TCBS')
-                vnindex_data = stock.quote.history(start='2020-01-01', end='2024-12-31')
+                vnindex_data = stock.quote.history(start='2020-01-01', end='2025-07-31')
                 vnindex_data['time'] = pd.to_datetime(vnindex_data['time'])
                 vnindex_data.to_csv("vnindex_data.csv", index=False)
                 st.success("Đã lưu dữ liệu VN-Index vào file 'vnindex_data.csv'.")
@@ -1515,4 +1515,5 @@ with tab8:
     )
 
     # Hiển thị biểu đồ
+
     st.plotly_chart(fig, use_container_width=True)
