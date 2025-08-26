@@ -4,7 +4,7 @@
 
 VieTOPstock-App is a personal project developed to analyze and optimize investment portfolios on the Vietnamese stock market. This web application, built with Streamlit, Python, and the vnstock API, integrates stock data analysis, portfolio optimization, and extended features to support investors, such as news tracking, financial report monitoring, and stock price visualization charts.
 
-**Link app:** https://vietstock-optimizer-app-hophamhuu1103.streamlit.app/
+**Link app:** https://vietopstock-app-110103.streamlit.app/
 
 **Features**
 - **Stock Data Fetching:** Retrieve historical stock data from 2020 to 2024 via the vnstock API.
